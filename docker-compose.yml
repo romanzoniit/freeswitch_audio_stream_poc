@@ -1,6 +1,6 @@
 services:
   vosk-server:
-    image: alphacep/kaldi-en:latest
+    image: alphacep/kaldi-ru:latest
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped

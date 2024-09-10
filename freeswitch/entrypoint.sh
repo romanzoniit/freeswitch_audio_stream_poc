@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sed -i '/<X-PRE-PROCESS cmd="set" data="default_password=[^"]*"\/>/c\<X-PRE-PROCESS cmd="set" data="default_password='"${EXTENSION_PASSWORD:-extensionpassword}"'"\/>' /usr/local/freeswitch/conf/vars.xml
 
@@ -20,4 +20,4 @@ awk -v numbertodial="$NUMBER_TO_DIAL" '
 
 echo "127.0.0.1 vosk-server" | tee -a /etc/hosts > /dev/null
 
-/usr/local/freeswitch/bin/freeswitch -nonat -nf -nc
+/usr/local/freeswitch/bin/freeswitch -nonat -nf -np
